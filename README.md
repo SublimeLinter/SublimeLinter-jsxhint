@@ -3,6 +3,8 @@ SublimeLinter-jsxhint
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [jsxhint](https://github.com/CondeNast/JSXHint). It will be used with files that have the “JSX” syntax.
 
+JSX is a JavaScript XML syntax transform intended for use with [React.js](http://facebook.github.io/react/docs/jsx-in-depth.html).
+
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
 
@@ -11,12 +13,17 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. Install [Node.js](http://nodejs.org).
 
-1. Install `jsxhint` by typing the following in a terminal:
+1. Install `jsxhint` by typing the following in a terminal:\
    ```
-   npm install -g jsxhint
+   npm install -g STRML/jsxhint
    ```
 
 Once jsxhint is installed, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
+
+### Notes
+SublimeLinter-jsxhint relies on a few modifications to CondeNast's jsxhint that are in an outstanding
+[pull request](https://github.com/CondeNast/JSXHint/pull/7). Once it is merged, I will update this readme and 
+advocate installation via `npm install -g jsxhint`.
 
 ### Plugin installation
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
