@@ -23,11 +23,6 @@ class JSXHint(Linter):
     executable = 'jsxhint'
     regex = r'^.+?: line (?P<line>\d+), col (?P<col>\d+), (?P<message>.+) \((?:(?P<error>E)|(?P<warning>W))\d+\)$'
 
-    def can_lint_syntax(syntax):
-        print(syntax);
-        if syntax == 'javascript (jsx)':
-            return True
-
     def cmd(self):
         """
         Return a string with the command line to execute.

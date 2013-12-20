@@ -13,7 +13,7 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. Install [Node.js](http://nodejs.org).
 
-1. Install `jsxhint` by typing the following in a terminal:\
+1. Install `jsxhint` by typing the following in a terminal:
    ```
    npm install -g STRML/jsxhint
    ```
