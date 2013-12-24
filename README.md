@@ -18,6 +18,9 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
    npm install -g STRML/JSXHint
    ```
 
+1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
+
+
 Once jsxhint is installed, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
 
 ### Notes
