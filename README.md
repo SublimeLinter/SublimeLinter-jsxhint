@@ -11,7 +11,7 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `jsxhint` is installed on your system. To install `jsxhint`, do the following:
 
-1. Install [Node.js](http://nodejs.org).
+1. Install [Node.js](http://nodejs.org) (and [npm](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) on Linux).
 
 1. Install `jsxhint` by typing the following in a terminal: (capitalization is important!)
    ```
