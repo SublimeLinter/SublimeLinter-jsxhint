@@ -17,7 +17,7 @@ from SublimeLinter.lint import Linter, util
 
 class JSXHint(Linter):
 
-    """Provides an interface to the jshint executable."""
+    """Provides an interface to the jsxhint executable."""
 
     syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)')
     executable = 'jsxhint'
