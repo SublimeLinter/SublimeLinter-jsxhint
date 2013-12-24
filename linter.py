@@ -21,7 +21,11 @@ class JSXHint(Linter):
 
     syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)')
     executable = 'jsxhint'
-    regex = r'^.+?: line (?P<line>\d+), col (?P<col>\d+), (?P<message>.+) \((?:(?P<error>E)|(?P<warning>W))\d+\)$'
+    regex = (
+        r'^(?:(?P<fail>ERROR: .+)|'
+        r'.+?: line (?P<line>\d+), col (?P<col>\d+), '
+        r'(?P<message>.+) \((?:(?P<error>E)|(?P<warning>W))\d+\))'
+    )
 
     def cmd(self):
         """
@@ -31,11 +35,35 @@ class JSXHint(Linter):
         and we can't rely on jsxhint to find them, because we are using stdin.
 
         """
+        
+        command = [self.executable_path, '--verbose', '*']
 
-        command = [self.executable_path, '--verbose']
-        jshintrc = util.find_file(os.path.dirname(self.filename), '.jshintrc')
+        # Allow the user to specify a config file in args
+        args = self.get_user_args()
 
-        if jshintrc:
-            command += ['--config', jshintrc]
+        if '--config' not in args:
+            jshintrc = util.find_file(os.path.dirname(self.filename), '.jshintrc')
 
-        return command + ['*', '-']
+            if jshintrc:
+                command += ['--config', jshintrc]
+
+        return command + ['-']
+
+
+    def split_match(self, match):
+           """
+           Return the components of the match.
+
+           We override this to catch linter error messages and place them
+           at the top of the file.
+
+           """
+
+           if match:
+               fail = match.group('fail')
+
+               if fail:
+                   # match, line, col, error, warning, message, near
+                   return match, 0, 0, True, False, fail, None
+
+           return super().split_match(match)
