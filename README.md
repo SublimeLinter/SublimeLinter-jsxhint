@@ -13,9 +13,9 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. Install [Node.js](http://nodejs.org).
 
-1. Install `jsxhint` by typing the following in a terminal:
+1. Install `jsxhint` by typing the following in a terminal: (capitalization is important!)
    ```
-   npm install -g STRML/jsxhint
+   npm install -g STRML/JSXHint
    ```
 
 Once jsxhint is installed, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
