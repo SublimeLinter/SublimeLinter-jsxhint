@@ -32,10 +32,10 @@ class JSXHint(Linter):
 
         """
 
-        command = [self.executable_path]
+        command = [self.executable_path, '--verbose']
         jshintrc = util.find_file(os.path.dirname(self.filename), '.jshintrc')
 
         if jshintrc:
-            command += ['--jshintrc', jshintrc]
+            command += ['--config', jshintrc]
 
-        return command + ['--verbose', '--stdin']
+        return command + ['*', '-']
