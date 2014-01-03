@@ -21,34 +21,13 @@ class JSXHint(Linter):
 
     syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)')
     executable = 'jsxhint'
+    cmd = 'jshint --verbose * -'
     regex = (
         r'^(?:(?P<fail>ERROR: .+)|'
         r'.+?: line (?P<line>\d+), col (?P<col>\d+), '
         r'(?P<message>.+) \((?:(?P<error>E)|(?P<warning>W))\d+\))'
     )
-
-    def cmd(self):
-        """
-        Return a string with the command line to execute.
-
-        We define this method because we want to use the .jshintrc files,
-        and we can't rely on jsxhint to find them, because we are using stdin.
-
-        """
-        
-        command = [self.executable_path, '--verbose', '*']
-
-        # Allow the user to specify a config file in args
-        args = self.get_user_args()
-
-        if '--config' not in args:
-            jshintrc = util.find_file(os.path.dirname(self.filename), '.jshintrc')
-
-            if jshintrc:
-                command += ['--config', jshintrc]
-
-        return command + ['-']
-
+    config_file = ('--config', '.jshintrc', '~')
 
     def split_match(self, match):
            """
