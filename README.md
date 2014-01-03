@@ -1,12 +1,12 @@
 SublimeLinter-jsxhint
 =========================
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [jsxhint](https://github.com/CondeNast/JSXHint). It will be used with files that have the “JSX” syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jsxhint](https://github.com/STRML/JSXHint). It will be used with files that have the “JSX” syntax.
 
 JSX is a JavaScript XML syntax transform intended for use with [React.js](http://facebook.github.io/react/docs/jsx-in-depth.html).
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
+SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 ### Linter installation
 Before using this plugin, you must ensure that `jsxhint` is installed on your system. To install `jsxhint`, do the following:
@@ -38,7 +38,7 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `jsxhint`. Among the entries you should see `SublimeLinter-jsxhint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
+For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
 You can configure `jshint` options in the way you would from the command line, with `.jshintrc` files. For more information, see the [jshint docs](http://www.jshint.com/docs/).
 
