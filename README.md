@@ -13,7 +13,7 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. Install [Node.js](http://nodejs.org) (and [npm](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) on Linux).
 
-1. Install `jsxhint` by typing the following in a terminal: (capitalization is important!)
+1. Install `jsxhint` by typing the following in a terminal: (capitalization is very important!)
    ```
    npm install -g STRML/JSXHint
    ```
@@ -25,7 +25,7 @@ Once jsxhint is installed, you can proceed to install the SublimeLinter-jsxhint 
 
 ### Notes
 SublimeLinter-jsxhint relies on a few modifications to CondeNast's jsxhint that are in an outstanding
-[pull request](https://github.com/CondeNast/JSXHint/pull/7). Once it is merged, I will update this readme and 
+[pull request](https://github.com/CondeNast/JSXHint/pull/9). It assumes an API identical to `jshint`. Once it is merged, I will update this readme and 
 advocate installation via `npm install -g jsxhint`.
 
 ### Plugin installation
