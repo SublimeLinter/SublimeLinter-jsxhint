@@ -20,12 +20,14 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
 
+### Linter configuration
+In order for `jsxhint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
-Once jsxhint is installed, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
+Once `jsxhint` is installed and configured, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
 
 ### Notes
 SublimeLinter-jsxhint relies on a few modifications to CondeNast's jsxhint that are in an outstanding
-[pull request](https://github.com/CondeNast/JSXHint/pull/9). It assumes an API identical to `jshint`. Once it is merged, I will update this readme and 
+[pull request](https://github.com/CondeNast/JSXHint/pull/9). It assumes an API identical to `jshint`. Once it is merged, I will update this readme and
 advocate installation via `npm install -g jsxhint`.
 
 ### Plugin installation
