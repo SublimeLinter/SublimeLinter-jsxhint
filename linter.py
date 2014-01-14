@@ -20,8 +20,7 @@ class JSXHint(Linter):
     """Provides an interface to the jsxhint executable."""
 
     syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)')
-    executable = 'jsxhint'
-    cmd = 'jshint --verbose * -'
+    cmd = 'jsxhint --verbose * -'
     regex = (
         r'^(?:(?P<fail>ERROR: .+)|'
         r'.+?: line (?P<line>\d+), col (?P<col>\d+), '
