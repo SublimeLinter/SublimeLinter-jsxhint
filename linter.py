@@ -12,8 +12,8 @@
 
 """This module exports the JSXHint plugin linter class."""
 
-import os
-from SublimeLinter.lint import Linter, util
+from SublimeLinter.lint import Linter
+
 
 class JSXHint(Linter):
 
@@ -29,19 +29,19 @@ class JSXHint(Linter):
     config_file = ('--config', '.jshintrc', '~')
 
     def split_match(self, match):
-           """
-           Return the components of the match.
+        """
+        Return the components of the match.
 
-           We override this to catch linter error messages and place them
-           at the top of the file.
+        We override this to catch linter error messages and place them
+        at the top of the file.
 
-           """
+        """
 
-           if match:
-               fail = match.group('fail')
+        if match:
+            fail = match.group('fail')
 
-               if fail:
-                   # match, line, col, error, warning, message, near
-                   return match, 0, 0, True, False, fail, None
+            if fail:
+                # match, line, col, error, warning, message, near
+                return match, 0, 0, True, False, fail, None
 
-           return super().split_match(match)
+        return super().split_match(match)
