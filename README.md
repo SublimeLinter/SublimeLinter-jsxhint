@@ -22,6 +22,17 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
 
+1. Install the [`Javascript (JSX)` syntax highlighting bundle](https://raw.github.com/SublimeLinter/SublimeLinter-jsxhint/master/JavaScript%20(JSX).tmLanguage)
+by placing it in the JavaScript folder in your Sublime Text Packages directory. The location of that directory is:
+
+| OS        | Location          
+| --------- |:-------------:
+| OS X      | `~/Library/Sublime Text 3/Packages/JavaScript` 
+| Windows   | `%APPDATA%\Sublime Text 3\Packages\JavaScript`      
+| Linux     | `~/.Sublime Text 3/Packages/JavaScript`      
+
+
+
 ### Linter configuration
 In order for `jsxhint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
