@@ -1,0 +1,7 @@
+SublimeLinter-jsxhint 1.0.11
+----------------------------
+
+The dependency on `STRML/jSXHint` has been removed, as ownership of the name `jsxhint` on npm has been
+transferred to the new project. 
+
+You may now get the newest version of `jsxhint` via `npm install -g jsxhint`.

@@ -36,7 +36,6 @@ class JSXHint(Linter):
         at the top of the file.
 
         """
-
         if match:
             fail = match.group('fail')
 

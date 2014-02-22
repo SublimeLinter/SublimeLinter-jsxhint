@@ -15,9 +15,9 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. Install [Node.js](http://nodejs.org) (and [npm](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) on Linux).
 
-1. Install `jsxhint` by typing the following in a terminal: (capitalization is very important!)
+1. Install `jsxhint` by typing the following in a terminal:
    ```
-   npm install -g STRML/JSXHint
+   npm install -g jsxhint
    ```
 
 1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
@@ -27,7 +27,7 @@ by placing it in the JavaScript folder in your Sublime Text Packages directory. 
 
 | OS        | Location          
 | --------- |:-------------:
-| OS X      | `~/Library/Sublime Text 3/Packages/JavaScript` 
+| OS X      | `~/Library/Application Support/Sublime Text 3/Packages/JavaScript` 
 | Windows   | `%APPDATA%\Sublime Text 3\Packages\JavaScript`      
 | Linux     | `~/.Sublime Text 3/Packages/JavaScript`      
 
@@ -37,11 +37,6 @@ by placing it in the JavaScript folder in your Sublime Text Packages directory. 
 In order for `jsxhint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
 Once `jsxhint` is installed and configured, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
-
-### Notes
-SublimeLinter-jsxhint relies on a few modifications to CondeNast's jsxhint that are in an outstanding
-[pull request](https://github.com/CondeNast/JSXHint/pull/9). It assumes an API identical to `jshint`. Once it is merged, I will update this readme and
-advocate installation via `npm install -g jsxhint`.
 
 ### Plugin installation
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
