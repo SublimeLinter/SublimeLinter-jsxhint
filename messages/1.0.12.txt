@@ -1,0 +1,6 @@
+SublimeLinter-jsxhint 1.0.12
+----------------------------
+
+Fixed off-by-one line numbering error in jsxhint.
+
+Pulled in the latest changes from SublimeLinter-jshint, allowing more precise error highlighting.
