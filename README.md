@@ -20,14 +20,17 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
    npm install -g jsxhint
    ```
 
-1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
+1. Install a JSX syntax file. A syntax file is no longer included in this repo. Supported syntaxes are:
 
+* [6to5-Sublime](https://github.com/6to5/6to5-sublime) (supports additional ES6 features)
+* [Sublime-React](https://github.com/reactjs/sublime-react)
 
 
 ### Linter configuration
 In order for `jsxhint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
 Once `jsxhint` is installed and configured, you can proceed to install the SublimeLinter-jsxhint plugin if it is not yet installed.
+
 
 ### Plugin installation
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -41,9 +44,31 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-You can configure `jshint` options in the way you would from the command line, with `.jshintrc` files. For more information, see the [jshint docs](http://www.jshint.com/docs/).
+You can configure `jsxhint` options in the way you would from the command line, with `.jshintrc` files. For more information, see the [jshint docs](http://www.jshint.com/docs/). The linter plugin does this by searching for a `.jshintrc` file itself, just as `jsxhint` does from the command line. You may provide a custom config file by setting the linter’s `"args"` setting to `["--config", "/path/to/file"]`. On Windows, be sure to double the backslashes in the path, for example `["--config", "C:\\Users\\Aparajita\\jshint.conf"]`.
 
-**Note:** The linter plugin does this by searching for a `.jshintrc` file itself and setting the `--config` option if it finds one, so you cannot use that option in the linter’s `"args"` setting.
+The path to the `.jshintrc` file is cached, meaning if you create a new `.jshintrc` that should have precedence over the previous one (meaning it is closer to the .js file) you need to clear the cache for the linter to use the new `.jshintrc` You can clear the cache by going to: Tools > SublimeLinter > Clear Caches.
+
+You may want to provide separate linter settings for `jsxhint` vs `jshint`. To do that, use the option `config_filename`.
+
+For example, you could put this configuration in `.sublimelinterrc`, or in your User settings for SublimeLinter:
+
+```
+{
+    "linters": {
+        "jsxhint": {
+            "config_filename": ".jsxhintrc"
+        }
+    }
+}
+
+```
+
+## Troubleshooting
+
+* JSXHint is not linting!
+  - Ensure you are using an appropriate syntax definition for the file you are editing. It must be a JSX-specific syntax
+    so that SublimeLinter knows to use this package.
+  - View the Sublime Text console by pressing `ctrl-tilde`. If you open an issue, please include this output.
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:

@@ -1,0 +1,9 @@
+SublimeLinter-jsxhint 1.1.0
+----------------------------
+
+Added "Javascript 6to5" to syntax target list.
+
+Removed bundled JSX syntax. Users should install sublime-react or 6to5-sublime packages instead, which are
+properly maintained.
+
+Added `config_filename` option. Set to e.g. `.jsxhintrc` to use a separate config file for jsxhint.

@@ -49,7 +49,6 @@ class JSXHint(Linter):
         r' \((?:(?P<error>E)|(?P<warning>W))(?P<code>\d+)\))'
     )
 
-
     def cmd(self):
         """Return the command line to execute."""
         command = [self.executable_path, '--verbose', '--filename', '@']
@@ -58,16 +57,16 @@ class JSXHint(Linter):
 
     def build_args(self, settings=None):
         """Override build_args to allow setting a custom config filename."""
-        backup = self.config_file;
+        backup = self.config_file
         if 'config_filename' in settings and self.filename:
-            self.config_file = (self.config_file[0], settings['config_filename'], self.config_file[2]);
+            self.config_file = (self.config_file[0], settings['config_filename'], self.config_file[2])
 
-        out = super().build_args(settings);
+        out = super().build_args(settings)
 
         # Reset the value of config_file so that this can apply per-project.
         self.config_file = backup
 
-        return out;
+        return out
 
     def split_match(self, match):
         """
