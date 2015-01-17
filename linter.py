@@ -20,7 +20,7 @@ class JSXHint(Linter):
 
     """Provides an interface to the jsxhint executable."""
 
-    syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)')
+    syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)', 'javascript 6to5')
     cmd = 'jsxhint --verbose * -'
     config_file = ('--config', '.jshintrc', '~')
     version_re = r'\bv(?P<version>\d+\.\d+\.\d+)'
