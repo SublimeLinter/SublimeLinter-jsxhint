@@ -21,7 +21,7 @@ class JSXHint(Linter):
     """Provides an interface to the jsxhint executable."""
 
     syntax = ('jsx', 'javascript_jsx', 'javascript (jsx)', 'javascript 6to5')
-    cmd = 'jsxhint --verbose * -'
+    executable = 'jsxhint'
     config_file = ('--config', '.jshintrc', '~')
     version_re = r'\bv(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 0.4.0'
@@ -48,6 +48,26 @@ class JSXHint(Linter):
         # capture error, warning and code
         r' \((?:(?P<error>E)|(?P<warning>W))(?P<code>\d+)\))'
     )
+
+
+    def cmd(self):
+        """Return the command line to execute."""
+        command = [self.executable_path, '--verbose', '--filename', '@']
+
+        return command + ['*', '-']
+
+    def build_args(self, settings=None):
+        """Override build_args to allow setting a custom config filename."""
+        backup = self.config_file;
+        if 'config_filename' in settings and self.filename:
+            self.config_file = (self.config_file[0], settings['config_filename'], self.config_file[2]);
+
+        out = super().build_args(settings);
+
+        # Reset the value of config_file so that this can apply per-project.
+        self.config_file = backup
+
+        return out;
 
     def split_match(self, match):
         """
