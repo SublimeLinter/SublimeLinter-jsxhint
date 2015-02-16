@@ -1,0 +1,7 @@
+SublimeLinter-jsxhint 1.1.1
+----------------------------
+
+6to5 has now been renamed to Babel.
+
+- Added "javascript (babel)" to syntax target list.
+- Updated documentation to reflect 6to5 name change.
