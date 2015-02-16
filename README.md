@@ -22,7 +22,7 @@ Before using this plugin, you must ensure that `jsxhint` is installed on your sy
 
 1. Install a JSX syntax file. A syntax file is no longer included in this repo. Supported syntaxes are:
 
-* [6to5-Sublime](https://github.com/6to5/6to5-sublime) (supports additional ES6 features)
+* [Babel-Sublime](https://github.com/babel/babel-sublime) (supports additional ES6 features)
 * [Sublime-React](https://github.com/reactjs/sublime-react)
 
 
