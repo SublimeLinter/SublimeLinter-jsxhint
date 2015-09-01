@@ -1,6 +1,15 @@
 SublimeLinter-jsxhint
 =========================
 
+Deprecation
+-----------
+
+Use [ESLint](http://eslint.org/) and [SublimeLinter-ESLint](https://github.com/roadhump/SublimeLinter-eslint) instead, which gives better errors and has fewer problems with ES6.
+
+JSXHint has been deprecated.
+
+-----
+
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-jsxhint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-jsxhint)
 
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jsxhint](https://github.com/STRML/JSXHint). It will be used with files that have the “JSX” syntax.
