@@ -3,7 +3,8 @@
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # SublimeLinter-jshint written by Aparajita Fishman
-# Copyright (c) 2013 Aparajita Fishman
+# Copyright (c) 2015-2016 The SublimeLinter Community
+# Copyright (c) 2013-2014 Aparajita Fishman
 #
 # Forked for JSXHint by Samuel Reed (STRML)
 #
@@ -17,7 +18,6 @@ from SublimeLinter.lint import Linter
 
 
 class JSXHint(Linter):
-
     """Provides an interface to the jsxhint executable."""
 
     # "javascript 6to5" is now "javascript (babel)", but lets leave 6to5
